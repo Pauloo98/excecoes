@@ -12,17 +12,17 @@ public class Fluxo {
 		System.out.println("Inicio do metodo 1");
 		try {
 			metodo2();
-		} catch (ArithmeticException | NullPointerException ex) {
+		} catch (ArithmeticException | NullPointerException | MinhaExcecao ex) {
 			String msg = ex.getMessage();
 			System.out.println("Exception  " + msg);
 		} 
 		System.out.println("Fim do metodo 1");
 	}
 
-	public static void metodo2() {
+	public static void metodo2() throws MinhaExcecao {
 		System.out.println("Inicio do metodo 2");
 
-		throw new ArithmeticException();
+		throw new MinhaExcecao("deu erro");
 
 		
 		
